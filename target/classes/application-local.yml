@@ -1,0 +1,63 @@
+# MS setup file.
+# Created by Raul Peña (raul.pena@gmail.com)
+
+---
+
+# Server settings.
+server:
+  address: 0.0.0.0
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+# Spring settings.
+spring:
+  cache:
+    type: redis
+    redis:
+      time-to-live: 1m
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_SEARCHES_HOST}:${DB_SEARCHES_PORT}/${DB_SEARCHES_DATABASE}
+    username: ${DB_SEARCHES_COMMONS_USER}
+    password: ${DB_SEARCHES_COMMONS_PW}
+    hikari:
+      connectionTimeout: 30000
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      maximum-pool-size: 20
+      minimum-idle: 5
+      pool-name: ms-language-pool
+  data:
+    redis:
+      port: ${DB_REDIS_PORT}
+      host: ${DB_REDIS_HOST}
+      database: 0
+      timeout: 1m
+      password: ${DB_REDIS_PW}
+
+# Actuator settings.
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: [ "health", "prometheus", "metrics" ]
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  security:
+    enabled: false
+
+# Logging settings.
+logging:
+  level:
+    root: INFO
+    teach:
+      searches: DEBUG
+    org:
+      springframework: INFO
