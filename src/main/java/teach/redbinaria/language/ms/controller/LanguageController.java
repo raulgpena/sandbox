@@ -9,7 +9,6 @@ package teach.redbinaria.language.ms.controller;
 
 // Packages and classes to import of springframework 6.x
 
-import tech.redbinaria.services.commons.ILanguageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -33,8 +32,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class LanguageController {
 
 
-    @Autowired
-    private ILanguageService languageService;
 
 
     // Public instance method declarations.
@@ -45,6 +42,6 @@ public class LanguageController {
     @RequestMapping(value = "", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<?> getAll() {
 
-        return new ResponseEntity<>(this.languageService.findAll(), HttpStatus.OK);
+        return null;
     }
 }

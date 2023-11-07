@@ -54,18 +54,6 @@
 	  -->
 	<dependencies>
 
-		<!-- Searches dependencies. -->
-		<dependency>
-			<groupId>tech.redbinaria</groupId>
-			<artifactId>searches-core-repository</artifactId>
-			<version>${searches-core-service.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>tech.redbinaria</groupId>
-			<artifactId>searches-core-service</artifactId>
-			<version>${searches-core-service.version}</version>
-		</dependency>
-
 		<!-- Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
