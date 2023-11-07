@@ -1,0 +1,32 @@
+# Config server file.
+# Created by Raul Peña (raul.pena@gmail.com)
+
+---
+# Global settings.
+spring:
+  application:
+    name: searches-read-language-ms
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
+
+
+---
+# Local profile.
+spring:
+  cloud:
+    config:
+      enabled: false
+  config:
+    activate:
+      on-profile: local
+
+---
+# Environments.
+spring:
+  cloud:
+    config:
+      fail-fast: false
+      uri: ${SPRING_CONFIG_URI}
+  config:
+    activate:
+      on-profile: ${SEARCHES_PROFILES_ACTIVES}
