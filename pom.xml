@@ -9,126 +9,38 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.2</version>
+		<version>2.2.7.RELEASE</version>
 		<relativePath/>
 	</parent>
 
 	<!--
 	   - POM Setup.
 	  -->
-	<groupId>tech.redbinaria</groupId>
-	<artifactId>searches-read-language-ms</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>searches-read-language-ms</name>
-	<description>searches-read-language-ms</description>
+	<groupId>training.sandbox</groupId>
+	<artifactId>springboot-custom-actuators</artifactId>
+	<version>0.0.0-SNAPSHOT</version>
+	<name>springboot-custom-actuators</name>
+	<description>springboot-custom-actuators</description>
 
 	<!--
 	   - POM Properties.
 	  -->
 	<properties>
 		<java.version>11</java.version>
-		<spring-cloud.version>2022.0.2</spring-cloud.version>
-		<hikaricp.version>5.0.1</hikaricp.version>
-		<postgresql.version>42.2.12.jre7</postgresql.version>
-		<redis.version>2.9.3</redis.version>
-		<searches-core-service.version>0.0.1-SNAPSHOT</searches-core-service.version>
 	</properties>
-
-	<!--
-	   - Dependency management.
-	  -->
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<!--
 	   - POM Dependencies.
 	  -->
 	<dependencies>
-
-		<!-- Lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-
-		<!-- Data dependencies. -->
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>${postgresql.version}</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP</artifactId>
-			<version>${hikaricp.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>redis.clients</groupId>
-			<artifactId>jedis</artifactId>
-			<version>${redis.version}</version>
-		</dependency>
-
-		<!-- Telemetry and observability dependencies. -->
+		<!-- Spring dependencies. -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-tracing-bridge-otel</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-registry-prometheus</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.opentelemetry</groupId>
-			<artifactId>opentelemetry-exporter-otlp</artifactId>
-		</dependency>
-
-		<!-- Spring dependencies. -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-bootstrap</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-cache</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
 
 	</dependencies>
@@ -137,7 +49,7 @@
 	   - POM Build setup.
 	  -->
 	<build>
-		<finalName>searches-read-language-ms</finalName>
+		<finalName>springboot-custom-actuators</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
