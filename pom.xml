@@ -26,7 +26,7 @@
 	   - POM Properties.
 	  -->
 	<properties>
-		<java.version>8</java.version>
+		<java.version>14</java.version>
 		<spring-cloud.version>2022.0.2</spring-cloud.version>
 		<hikaricp.version>5.0.1</hikaricp.version>
 		<postgresql.version>42.2.12.jre7</postgresql.version>
